@@ -1,0 +1,48 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "filtered",
+  "dataset_size": 509478,
+  "description": "",
+  "download_checksums": {
+    "/mnt/lustre/hackathons/hack_teams/hack_team_16/workspace/Jishnu/data/filtered/train.jsonl": {
+      "num_bytes": 429890,
+      "checksum": null
+    },
+    "/mnt/lustre/hackathons/hack_teams/hack_team_16/workspace/Jishnu/data/filtered/test.jsonl": {
+      "num_bytes": 107940,
+      "checksum": null
+    }
+  },
+  "download_size": 537830,
+  "features": {
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 1047308,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 407220,
+      "num_examples": 5650,
+      "dataset_name": "filtered"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 102258,
+      "num_examples": 1413,
+      "dataset_name": "filtered"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

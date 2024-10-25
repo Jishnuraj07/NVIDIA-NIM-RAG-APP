@@ -1,0 +1,38 @@
+# Define user intents
+
+define user express_greeting
+  "Hello"
+  "Hi"
+
+define user ask_capabilities
+  "What can you do?"
+  "What can you help me with?"
+  "Tell me what you can do"
+  "Tell me about you"
+
+# Define bot responses
+
+define bot express_greeting
+  "Hello! How can I assist you today?"
+
+define bot inform_capabilities
+  "I am an AI assistant, and I can help with answering questions, code debugging, CUDA programming, and more!"
+
+# Define flows
+
+flow handle_greeting
+  WHEN user express_greeting
+    bot express_greeting
+
+flow handle_capabilities
+  WHEN user ask_capabilities
+    bot inform_capabilities
+
+# Define subflows for input and output modification
+
+subflow dummy_input_rail
+  IF "hello" in $user_message
+    $user_message = $user_message + " hello"
+
+subflow dummy_output_rail
+  $bot_message = $bot_message + "!!"

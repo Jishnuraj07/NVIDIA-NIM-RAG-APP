@@ -1,0 +1,32 @@
+# Define user intents
+
+define user express_greeting
+  "Hello"
+  "Hi"
+  "Hey"
+
+define user ask_capabilities
+  "What can you do?"
+  "What can you help me with?"
+  "Tell me what you can do"
+  "Tell me about you"
+
+# Define bot responses
+
+define bot express_greeting
+  "Hello! How can I assist you today?"
+
+define bot inform_capabilities
+  "I am an AI assistant and I'm here to help with answering questions, code debugging, CUDA programming, and more!"
+
+# Flow for handling greetings
+
+flow handle_greeting
+  WHEN user express_greeting
+    bot express_greeting
+
+# Flow for handling questions about bot capabilities
+
+flow handle_capabilities
+  WHEN user ask_capabilities
+    bot inform_capabilities
